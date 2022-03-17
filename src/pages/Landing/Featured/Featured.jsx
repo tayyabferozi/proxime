@@ -112,7 +112,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-2",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -120,7 +120,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-3",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -128,7 +128,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-4",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -136,7 +136,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-5",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -144,7 +144,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-6",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -186,7 +186,7 @@ const Featured = () => {
           >
             {[
               {
-                id: "edition-1",
+                id: "edition-7",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -194,7 +194,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-8",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -202,7 +202,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-9",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -210,7 +210,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-10",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -218,7 +218,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-11",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
@@ -226,7 +226,7 @@ const Featured = () => {
                 available: "124/2000",
               },
               {
-                id: "edition-1",
+                id: "edition-12",
                 img: "./assets/imgs/featured-edition-1.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
