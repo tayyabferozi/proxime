@@ -1,0 +1,86 @@
+%transitioned {
+  transition: 0.4s ease;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  &.lg {
+    font-size: 20px;
+  }
+
+  &.md {
+    font-size: 17px;
+  }
+
+  &.sm,
+  &.small {
+    font-size: 15px;
+  }
+}
+
+.section-sub-title {
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+
+  &.btn-gradient {
+    border-radius: 50px;
+    height: 50px;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+    background: linear-gradient(45deg, $color1, $color2);
+    color: #000 !important;
+    @extend %transitioned;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+input {
+  outline: none !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #000;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #000;
+  opacity: 1;
+  @extend %transitioned;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $color1;
+  }
+}
