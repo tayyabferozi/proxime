@@ -22,7 +22,7 @@ const Navbar = () => {
           <input type="search" placeholder="Search Here" />
 
           <div className="nav">
-            <Link to="/">Explore</Link>
+            <Link to="/explore">Explore</Link>
             <Link to="/">Leader Board</Link>
             <Link to="/">Resources</Link>
             <Link to="/">
@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* <img className="logo" src="./assets/vectors/logo.svg" alt="logo" /> */}
 
           <div className="links">
-            <Link to="/">Explore</Link>
+            <Link to="/explore">Explore</Link>
             <Link to="/">Leader Board</Link>
             <Link to="/">Resources</Link>
             <Link to="/">

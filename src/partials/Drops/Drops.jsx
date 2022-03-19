@@ -6,7 +6,7 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Section from "../../../components/Section/Section";
+import Section from "../../components/Section/Section";
 
 const Drops = () => {
   return (

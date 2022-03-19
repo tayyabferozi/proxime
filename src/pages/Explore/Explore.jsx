@@ -1,22 +1,20 @@
 import React from "react";
+import Section from "../../components/Section/Section";
 
 import MainLayout from "../../layouts/MainLayout";
 import Drops from "../../partials/Drops/Drops";
 import Featured from "../../partials/Featured/Featured";
-import Hero from "./Hero/Hero";
-import HowItWorks from "./HowItWorks/HowItWorks";
-import Release from "./Release/Release";
 
-const Landing = () => {
+const Explore = () => {
   return (
     <MainLayout>
-      <Hero />
-      <Release />
+      <Section id="hero-sm">
+        <h2>Explore</h2>
+      </Section>
       <Drops />
-      <HowItWorks />
       <Featured />
     </MainLayout>
   );
 };
 
-export default Landing;
+export default Explore;

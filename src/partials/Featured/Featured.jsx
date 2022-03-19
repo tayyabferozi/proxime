@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Section from "../../../components/Section/Section";
+import Section from "../../components/Section/Section";
 import TextCard from "./TextCard/TextCard";
 
 const Featured = () => {
