@@ -13,7 +13,7 @@ import ReleaseCard from "./ReleaseCard/ReleaseCard";
 const Release = () => {
   return (
     <Section id="release">
-      <GridContainer>
+      <GridContainer rowClassName="gy-4">
         <div className="col-lg-6">
           <h3 className="title">Next Release in 6 hrs 26 mins</h3>
 

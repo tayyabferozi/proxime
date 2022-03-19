@@ -7,9 +7,9 @@ const ReleaseCard = ({ img, text1, title, text2 }) => {
         <img src={img} alt={title} />
       </div>
       <div className="card-text">
-        <p className="card-text__sub-title">{text1}</p>
+        <p className="xl card-text__sub-title">{text1}</p>
         <h2>{title}</h2>
-        <p>{text2}</p>
+        <p className="lg">{text2}</p>
       </div>
     </div>
   );

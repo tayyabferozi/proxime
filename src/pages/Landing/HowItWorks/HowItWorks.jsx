@@ -17,8 +17,8 @@ const HowItWorks = () => {
       </div>
 
       <div className="cards-container">
-        <GridContainer>
-          <div className="col-lg-4">
+        <GridContainer rowClassName="card-row justify-content-center">
+          <div className="col-lg-4 col-sm-6">
             <div className="card">
               <div className="number">1</div>
 
@@ -36,7 +36,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-sm-6">
             <div className="card">
               <div className="number">2</div>
 
@@ -54,7 +54,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-sm-6">
             <div className="card">
               <div className="number">3</div>
 
@@ -72,6 +72,11 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
+          <img
+            className="bg-2"
+            src="./assets/vectors/bg-steps-cards.svg"
+            alt="bg"
+          />
         </GridContainer>
       </div>
 

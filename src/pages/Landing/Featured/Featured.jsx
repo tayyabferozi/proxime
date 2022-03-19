@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Section from "../../../components/Section/Section";
 import TextCard from "./TextCard/TextCard";
 
 const Featured = () => {
+  const iconsPrevRef = useRef(null);
+  const iconsNextRef = useRef(null);
+
+  const ediitonPrevRef = useRef(null);
+  const ediitonNextRef = useRef(null);
+
+  const nftsPrevRef = useRef(null);
+  const nftsNextRef = useRef(null);
+
   return (
     <Section id="featured">
       <div className="sub-section">
@@ -19,11 +29,57 @@ const Featured = () => {
         </div>
 
         <div className="slider-wrap">
+          <div className="slider-btns">
+            <button className="left" ref={iconsPrevRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+            <button className="right" ref={iconsNextRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+          </div>
           <Swiper
-            loop={true}
             spaceBetween={20}
             pagination={true}
-            slidesPerView={8}
+            navigation={{
+              prevEl: iconsPrevRef.current,
+              nextEl: iconsNextRef.current,
+            }}
+            modules={[Navigation]}
+            onInit={(swiper) => {
+              function update() {
+                swiper.params.navigation.prevEl = iconsPrevRef.current;
+                swiper.params.navigation.nextEl = iconsNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+
+              update();
+
+              setTimeout(update, 1000);
+            }}
+            breakpoints={{
+              1150: {
+                slidesPerView: 8,
+              },
+              992: {
+                slidesPerView: 7,
+              },
+              860: {
+                slidesPerView: 6,
+              },
+              728: {
+                slidesPerView: 5,
+              },
+              600: {
+                slidesPerView: 4,
+              },
+              390: {
+                slidesPerView: 3,
+              },
+              0: {
+                slidesPerView: 2,
+              },
+            }}
           >
             {[
               {
@@ -66,6 +122,11 @@ const Featured = () => {
                 img: "./assets/imgs/featured-icons-8.png",
                 name: "Lorem Ipsum",
               },
+              {
+                id: "featured-icon-1",
+                img: "./assets/imgs/featured-icons-1.png",
+                name: "Lorem Ipsum",
+              },
             ].map((el, idx) => {
               return (
                 <SwiperSlide key={el.id}>
@@ -96,11 +157,47 @@ const Featured = () => {
         </div>
 
         <div className="slider-wrap">
+          <div className="slider-btns">
+            <button className="left" ref={ediitonPrevRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+            <button className="right" ref={ediitonNextRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+          </div>
+
           <Swiper
             className="text-swiper"
             spaceBetween={24}
-            navigation={true}
             slidesPerView={3}
+            navigation={{
+              prevEl: ediitonPrevRef.current,
+              nextEl: ediitonNextRef.current,
+            }}
+            modules={[Navigation]}
+            onInit={(swiper) => {
+              function update() {
+                swiper.params.navigation.prevEl = ediitonPrevRef.current;
+                swiper.params.navigation.nextEl = ediitonNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+
+              update();
+
+              setTimeout(update, 1000);
+            }}
+            breakpoints={{
+              992: {
+                slidesPerView: 3,
+              },
+              650: {
+                slidesPerView: 2,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            }}
           >
             {[
               {
@@ -113,7 +210,7 @@ const Featured = () => {
               },
               {
                 id: "edition-2",
-                img: "./assets/imgs/featured-edition-1.png",
+                img: "./assets/imgs/featured-edition-2.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
                 price: "600.00",
@@ -121,7 +218,7 @@ const Featured = () => {
               },
               {
                 id: "edition-3",
-                img: "./assets/imgs/featured-edition-1.png",
+                img: "./assets/imgs/featured-edition-3.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
                 price: "600.00",
@@ -168,7 +265,7 @@ const Featured = () => {
 
       <div className="sub-section mt-5">
         <div className="text-center">
-          <h2>Featured Icons</h2>
+          <h2>Featured NFTs</h2>
 
           <p className="section-sub-title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -178,11 +275,47 @@ const Featured = () => {
         </div>
 
         <div className="slider-wrap">
+          <div className="slider-btns">
+            <button className="left" ref={nftsPrevRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+            <button className="right" ref={nftsNextRef}>
+              <img src="./assets/vectors/slider-arrow.svg" alt="arrow" />
+            </button>
+          </div>
+
           <Swiper
             className="text-swiper"
             spaceBetween={24}
-            navigation={true}
             slidesPerView={3}
+            navigation={{
+              prevEl: nftsPrevRef.current,
+              nextEl: nftsNextRef.current,
+            }}
+            modules={[Navigation]}
+            onInit={(swiper) => {
+              function update() {
+                swiper.params.navigation.prevEl = nftsPrevRef.current;
+                swiper.params.navigation.nextEl = nftsNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+
+              update();
+
+              setTimeout(update, 1000);
+            }}
+            breakpoints={{
+              992: {
+                slidesPerView: 3,
+              },
+              650: {
+                slidesPerView: 2,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            }}
           >
             {[
               {
@@ -195,7 +328,7 @@ const Featured = () => {
               },
               {
                 id: "edition-8",
-                img: "./assets/imgs/featured-edition-1.png",
+                img: "./assets/imgs/featured-edition-2.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
                 price: "600.00",
@@ -203,7 +336,7 @@ const Featured = () => {
               },
               {
                 id: "edition-9",
-                img: "./assets/imgs/featured-edition-1.png",
+                img: "./assets/imgs/featured-edition-3.png",
                 title: "Lorem Ipsum Dolor",
                 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
                 price: "600.00",
