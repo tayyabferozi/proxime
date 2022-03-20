@@ -6,6 +6,48 @@
   background: linear-gradient(45deg, $color1, $color2);
 }
 
+%primary-gradient-rev {
+  background: linear-gradient(-45deg, $color1, $color2);
+}
+
+%primary-gradient-to-right {
+  background: linear-gradient(to right, $color1, $color2);
+}
+
+%primary-gradient-to-left {
+  background: linear-gradient(to left, $color1, $color2);
+}
+
+%primary-gradient-to-top {
+  background: linear-gradient(to top, $color1, $color2);
+}
+
+%primary-gradient-to-bottom {
+  background: linear-gradient(to bottom, $color1, $color2);
+}
+
+%vertical-scrollbar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,6 +100,10 @@ button {
   font-weight: 400;
 }
 
+.text-light-1 {
+  color: $color24;
+}
+
 h2 {
   font-size: 50px;
 
@@ -75,6 +121,14 @@ h3 {
 
   @media screen and (max-width: 1400px) {
     font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 28px;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 26px;
   }
 }
 
@@ -127,6 +181,7 @@ p {
   align-items: center;
   cursor: pointer;
   font-size: 20px;
+  @extend %transitioned;
 
   &.btn-gradient {
     border-radius: 50px;
@@ -137,12 +192,75 @@ p {
     font-weight: 500;
 
     @extend %primary-gradient;
-    @extend %transitioned;
 
     &:hover {
       transform: translateY(-4px);
     }
   }
+
+  &.btn-primary-inverted {
+    background-color: #fff;
+    border: 1px solid $color2;
+    color: $color2 !important;
+    height: 46px;
+    width: 240px;
+    text-align: center;
+    display: block;
+
+    &:hover {
+      color: #fff !important;
+      background-color: $color2 !important;
+    }
+  }
+
+  &.btn-grey,
+  &.btn-light-grey {
+    text-align: center;
+    color: #fff;
+    height: 54px;
+    display: block;
+    width: 100%;
+  }
+
+  &.btn-grey {
+    background-color: $color21;
+    border: 1px solid $color21;
+
+    &:hover {
+      background-color: transparent;
+      color: $color21;
+    }
+  }
+
+  &.btn-light-grey {
+    background-color: $color22;
+    border: 1px solid $color21;
+
+    &:hover {
+      background-color: transparent;
+      color: $color22;
+    }
+  }
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.text-primary-1 {
+  color: $color1;
+}
+
+.text-primary {
+  color: $color1;
+}
+
+.text-underlined {
+  text-decoration: underline;
+}
+
+.c-pointer {
+  cursor: pointer;
 }
 
 input {
@@ -272,5 +390,51 @@ $color: #b3e5fc;
   }
   &:hover {
     cursor: pointer;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid $color10;
+
+  .tab {
+    position: relative;
+    padding: 24px 16px;
+    font-size: 20px;
+
+    &:not(.active) {
+      color: $color11;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 12px;
+      bottom: -8px;
+      left: 0;
+      opacity: 0;
+      border-radius: 8px;
+
+      @extend %primary-gradient-to-left;
+    }
+
+    &.active {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.pwd-input-wrapper {
+  position: relative;
+
+  .toggle-show {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
   }
 }

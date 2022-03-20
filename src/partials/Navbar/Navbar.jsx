@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import Section from "../../components/Section/Section";
 
-const Navbar = () => {
+const Navbar = ({ showModal }) => {
   const [isSideNavActive, setIsSideNavActive] = useState();
 
   const toggleSideNav = () => {
@@ -23,12 +23,12 @@ const Navbar = () => {
 
           <div className="nav">
             <Link to="/explore">Explore</Link>
-            <Link to="/">Leader Board</Link>
+            <Link to="/leader-board">Leader Board</Link>
             <Link to="/">Resources</Link>
-            <Link to="/">
+            <a onClick={showModal} href="#0">
               <img src="./assets/imgs/navbar-account.png" alt="my-account" />
               Login
-            </Link>
+            </a>
             <Link className="btn btn-gradient" to="/">
               Join Now
             </Link>
@@ -47,16 +47,14 @@ const Navbar = () => {
         </div>
 
         <div className={clsx("sidenav", { open: isSideNavActive })}>
-          {/* <img className="logo" src="./assets/vectors/logo.svg" alt="logo" /> */}
-
           <div className="links">
             <Link to="/explore">Explore</Link>
-            <Link to="/">Leader Board</Link>
+            <Link to="/leader-board">Leader Board</Link>
             <Link to="/">Resources</Link>
-            <Link to="/">
+            <a onClick={showModal} href="#0">
               <img src="./assets/imgs/navbar-account.png" alt="my-account" />
               Login
-            </Link>
+            </a>
             <Link className="btn btn-gradient" to="/">
               Join Now
             </Link>

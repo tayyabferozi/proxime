@@ -12,7 +12,7 @@ const Landing = () => {
     <MainLayout>
       <Hero />
       <Release />
-      <Drops />
+      <Drops rootClassName="pt-0" />
       <HowItWorks />
       <Featured />
     </MainLayout>

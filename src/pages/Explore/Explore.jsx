@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../../components/Section/Section";
+import HeroSm from "../../components/HeroSm/HeroSm";
 
 import MainLayout from "../../layouts/MainLayout";
 import Drops from "../../partials/Drops/Drops";
@@ -8,9 +8,7 @@ import Featured from "../../partials/Featured/Featured";
 const Explore = () => {
   return (
     <MainLayout>
-      <Section id="hero-sm">
-        <h2>Explore</h2>
-      </Section>
+      <HeroSm title="Explore" />
       <Drops />
       <Featured />
     </MainLayout>

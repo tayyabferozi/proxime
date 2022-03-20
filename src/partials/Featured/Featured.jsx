@@ -123,7 +123,7 @@ const Featured = () => {
                 name: "Lorem Ipsum",
               },
               {
-                id: "featured-icon-1",
+                id: "featured-icon-9",
                 img: "./assets/imgs/featured-icons-1.png",
                 name: "Lorem Ipsum",
               },

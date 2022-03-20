@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 
 import Section from "../../components/Section/Section";
 
-const Drops = () => {
+const Drops = ({ rootClassName }) => {
   return (
-    <Section id="drops" rootClassName="pt-0">
+    <Section id="drops" rootClassName={rootClassName}>
       <h2>Featured Drops</h2>
 
       <div className="drops-cards mt-4 pt-2">
