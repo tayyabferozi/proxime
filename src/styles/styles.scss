@@ -1197,3 +1197,243 @@
     }
   }
 }
+
+#blog-details {
+  .blog-post {
+    margin-top: 70px;
+
+    h3 {
+      color: #242f3c;
+    }
+
+    .info {
+      margin-top: 26px;
+
+      &,
+      * {
+        font-family: "HelveticaNeue", sans-serif;
+        font-size: 23px;
+        color: #757575;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 20px;
+        }
+      }
+
+      span:not(.light) {
+        @media screen and (max-width: 575px) {
+          display: block;
+        }
+      }
+
+      span.light {
+        color: #b6b6b6;
+      }
+    }
+
+    p {
+      color: $color25;
+      font-weight: 500;
+    }
+
+    .post-text {
+      margin: 54px 0 80px;
+
+      .quote-text {
+        margin: 80px 0;
+        padding-left: 40px;
+        border-left: 3.5px solid $color2;
+
+        @media screen and (max-width: 575px) {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .post-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+
+      @media screen and (max-width: 1060px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .btns {
+        display: flex;
+        gap: 24px;
+
+        @media screen and (max-width: 575px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .btn {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+      }
+
+      .share {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        @media screen and (max-width: 1060px) {
+          justify-content: center;
+        }
+
+        @media screen and (max-width: 575px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .share-text {
+          color: #242f3c;
+          font-weight: 500;
+          font-size: 26px;
+
+          @media screen and (max-width: 1600px) {
+            font-size: 20px;
+          }
+        }
+
+        .social-btns {
+          display: flex;
+          gap: 16px;
+
+          .btn {
+            background: #000;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            &:hover {
+              @extend %primary-gradient-to-top;
+            }
+          }
+        }
+      }
+    }
+
+    .post-nav {
+      display: flex;
+      gap: 50px;
+
+      @media screen and (max-width: 575px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  .blog-post-comments-wrapper {
+    margin-top: 90px;
+
+    h3 {
+      color: #959a99;
+    }
+
+    .comments-main {
+      margin-top: 74px;
+
+      .comment-item {
+        display: flex;
+        gap: 44px;
+        padding: 48px 40px;
+        border: 1px solid #cccccc;
+        margin-bottom: 48px;
+
+        @media screen and (max-width: 767px) {
+          flex-direction: column;
+          align-items: center;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .img {
+          width: 156px;
+          flex-shrink: 0;
+          text-align: center;
+
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+
+          .btn {
+            font-style: italic;
+            color: #828a83;
+            margin-top: 24px;
+
+            // font-family: "HelveticaNueue";
+          }
+        }
+
+        .comment-text {
+          @media screen and (max-width: 767px) {
+            text-align: center;
+          }
+
+          h4 {
+            color: #242f3c;
+          }
+
+          h5 {
+            color: #b6b6b6;
+            margin-top: 16px;
+          }
+
+          p {
+            margin-top: 30px;
+            color: $color25;
+          }
+        }
+      }
+    }
+  }
+
+  .leave-comment {
+    margin-top: 70px;
+
+    h3 {
+      color: #4b554c;
+      margin-bottom: 90px;
+    }
+
+    input {
+      height: 44px;
+    }
+
+    input,
+    textarea {
+      font-size: 24px;
+      border: none;
+      border-bottom: 1px solid #d9d9d9;
+      width: 100%;
+      @extend %transitioned;
+
+      &:focus {
+        border-bottom-color: #8c928c;
+      }
+
+      @media screen and (max-width: 1600px) {
+        font-size: 20px;
+      }
+
+      &::placeholder {
+        color: #8c928c;
+      }
+    }
+
+    .btn {
+      max-width: 330px;
+      margin-top: 80px;
+      margin-bottom: 50px;
+    }
+  }
+}

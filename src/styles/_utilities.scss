@@ -48,6 +48,16 @@
   }
 }
 
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/helveticaneue/HelveticaNeueMed.ttf");
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("../assets/Myriad\ Pro\ Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -213,6 +223,7 @@ p {
     }
   }
 
+  &.btn-dark,
   &.btn-grey,
   &.btn-light-grey {
     text-align: center;
@@ -220,6 +231,16 @@ p {
     height: 54px;
     display: block;
     width: 100%;
+  }
+
+  &.btn-dark {
+    background-color: #000;
+    border: 1px solid #000;
+
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
   }
 
   &.btn-grey {
@@ -263,7 +284,8 @@ p {
   cursor: pointer;
 }
 
-input {
+input,
+textarea {
   outline: none !important;
 }
 
