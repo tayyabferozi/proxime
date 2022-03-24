@@ -1,10 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSm from "../../components/HeroSm/HeroSm";
 import Section from "../../components/Section/Section";
 
 import MainLayout from "../../layouts/MainLayout";
 
 const Cart = () => {
+  const [cartState, setCartState] = useState([
+    {
+      id: "cart-1",
+      img: "./assets/imgs/cart-img-1.png",
+      title: "Your Title Here",
+      desc: "Lorem Ipsum is simply dummy text of the printing",
+      code: "WA16Z",
+      quantity: 1,
+      price: 75,
+      deliveryInfo: "Free Shipping",
+    },
+    {
+      id: "cart-2",
+      img: "./assets/imgs/cart-img-2.png",
+      title: "Your Title Here",
+      desc: "Lorem Ipsum is simply dummy text of the printing",
+      code: "WA16Z",
+      quantity: 1,
+      price: 75,
+      deliveryInfo: "Free Shipping",
+    },
+    {
+      id: "cart-3",
+      img: "./assets/imgs/cart-img-3.png",
+      title: "Your Title Here",
+      desc: "Lorem Ipsum is simply dummy text of the printing",
+      code: "WA16Z",
+      quantity: 1,
+      price: 75,
+      deliveryInfo: "Free Shipping",
+    },
+    {
+      id: "cart-4",
+      img: "./assets/imgs/cart-img-4.png",
+      title: "Your Title Here",
+      desc: "Lorem Ipsum is simply dummy text of the printing",
+      code: "WA16Z",
+      quantity: 1,
+      price: 75,
+      deliveryInfo: "Free Shipping",
+    },
+  ]);
+
+  const changeQuantity = (e, idx, action) => {
+    setCartState((prevState) => {
+      const newState = [...prevState];
+
+      if (action === "increment") {
+        newState[idx].quantity += 1;
+      } else {
+        if (newState[idx].quantity > 0) newState[idx].quantity -= 1;
+      }
+
+      return [...prevState];
+    });
+  };
+
   return (
     <MainLayout>
       <HeroSm title="Cart" />
@@ -24,52 +81,7 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              {[
-                {
-                  id: "cart-1",
-                  img: "./assets/imgs/cart-img-1.png",
-                  title: "Your Title Here",
-                  desc: "Lorem Ipsum is simply dummy text of the printing",
-                  code: "WA16Z",
-                  quantity: 1,
-                  price: 75,
-                  deliveryInfo: "Free Shipping",
-                  subTotal: 75,
-                },
-                {
-                  id: "cart-2",
-                  img: "./assets/imgs/cart-img-2.png",
-                  title: "Your Title Here",
-                  desc: "Lorem Ipsum is simply dummy text of the printing",
-                  code: "WA16Z",
-                  quantity: 1,
-                  price: 75,
-                  deliveryInfo: "Free Shipping",
-                  subTotal: 75,
-                },
-                {
-                  id: "cart-3",
-                  img: "./assets/imgs/cart-img-3.png",
-                  title: "Your Title Here",
-                  desc: "Lorem Ipsum is simply dummy text of the printing",
-                  code: "WA16Z",
-                  quantity: 1,
-                  price: 75,
-                  deliveryInfo: "Free Shipping",
-                  subTotal: 75,
-                },
-                {
-                  id: "cart-4",
-                  img: "./assets/imgs/cart-img-4.png",
-                  title: "Your Title Here",
-                  desc: "Lorem Ipsum is simply dummy text of the printing",
-                  code: "WA16Z",
-                  quantity: 1,
-                  price: 75,
-                  deliveryInfo: "Free Shipping",
-                  subTotal: 75,
-                },
-              ].map((el) => {
+              {cartState.map((el, idx) => {
                 const {
                   id,
                   img,
@@ -79,7 +91,6 @@ const Cart = () => {
                   quantity,
                   price,
                   deliveryInfo,
-                  subTotal,
                 } = el;
 
                 return (
@@ -97,9 +108,19 @@ const Cart = () => {
                     </td>
                     <td>
                       <div className="quantity-container">
-                        <button className="btn">-</button>
-                        <input type="number" value={quantity} />
-                        <button className="btn">+</button>
+                        <button
+                          onClick={(e) => changeQuantity(e, idx)}
+                          className="btn"
+                        >
+                          -
+                        </button>
+                        <input readOnly type="number" value={quantity} />
+                        <button
+                          onClick={(e) => changeQuantity(e, idx, "increment")}
+                          className="btn"
+                        >
+                          +
+                        </button>
                       </div>
                     </td>
                     <td>
@@ -107,7 +128,7 @@ const Cart = () => {
                     </td>
                     <td>{deliveryInfo}</td>
                     <td>
-                      <h6>${subTotal}</h6>
+                      <h6>${+price * quantity}</h6>
                     </td>
                     <td>
                       <img
