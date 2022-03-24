@@ -264,6 +264,11 @@ p {
     color: #777777 !important;
     text-align: center;
     display: block;
+    @extend %transitioned;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &.btn-light-grey {
