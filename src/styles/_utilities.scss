@@ -147,6 +147,11 @@ h5 {
   font-weight: 600;
 }
 
+h6 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 p {
   line-height: 1.75;
 
@@ -251,6 +256,14 @@ p {
       background-color: transparent;
       color: $color21;
     }
+  }
+
+  &.btn-white {
+    background-color: #fff;
+    font-weight: 300;
+    color: #777777 !important;
+    text-align: center;
+    display: block;
   }
 
   &.btn-light-grey {
@@ -459,4 +472,18 @@ $color: #b3e5fc;
     right: 24px;
     transform: translateY(-50%);
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.table-container {
+  overflow-x: auto;
 }

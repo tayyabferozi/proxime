@@ -1437,3 +1437,113 @@
     }
   }
 }
+
+#cart {
+  .quantity-container {
+    display: flex;
+
+    .btn {
+      width: 42px;
+      height: 36px;
+      border: 1px solid #ededed;
+      text-align: center;
+      padding: 0;
+      justify-content: center;
+    }
+
+    input {
+      width: 58px;
+      border: 1px solid #ededed;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  .table-container {
+    table {
+      border-collapse: collapse;
+
+      p {
+        font-size: 14px;
+        color: #bbbbbb;
+      }
+
+      tr {
+        border-bottom: 2px solid #ededed;
+
+        th {
+          font-weight: 300;
+          color: $color16;
+          background-color: $color26;
+          padding: 23px;
+        }
+
+        td {
+          padding: 28px 25px;
+
+          &:nth-child(1) {
+            min-width: 170px;
+          }
+
+          &:nth-child(2) {
+            min-width: 260px;
+          }
+
+          &:nth-child(3) {
+            min-width: 192px;
+          }
+
+          &:nth-child(4) {
+            text-align: center;
+            min-width: 138px;
+            font-weight: 300;
+          }
+
+          &:nth-child(5) {
+            text-align: center;
+            min-width: 170px;
+          }
+
+          &:nth-child(6) {
+            text-align: center;
+            min-width: 170px;
+          }
+
+          &:nth-child(7) {
+            text-align: center;
+            min-width: 140px;
+          }
+        }
+
+        &:nth-child(1) {
+          td {
+            padding-top: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .cart-btns {
+    background-color: $color26;
+    padding: 24px 28px;
+
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      font-size: 16px;
+      height: 47px;
+    }
+
+    .btn-dark {
+      max-width: 230px;
+    }
+
+    .btn-white {
+      width: 226px;
+    }
+  }
+}

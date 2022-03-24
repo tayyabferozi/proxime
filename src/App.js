@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs/Blogs";
 import BlogDetails from "./pages/BlogDetails/BlogDetails";
 import FAQs from "./pages/FAQs/FAQs";
 import Profile from "./pages/Profile/Profile";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/blog-details" element={<BlogDetails />} />
         <Route exact path="/faqs" element={<FAQs />} />
         <Route exact path="/profile" element={<Profile />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
