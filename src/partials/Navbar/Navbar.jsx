@@ -25,9 +25,12 @@ const Navbar = ({ showModal }) => {
             <Link to="/explore">Explore</Link>
             <Link to="/leader-board">Leader Board</Link>
             <Link to="/">Resources</Link>
-            <a onClick={showModal} href="#0">
+            <a className="dropdown" onClick={showModal} href="#0">
               <img src="./assets/imgs/navbar-account.png" alt="my-account" />
               Login
+              <div className="dropdown-content">
+                <div className="dropdown-item">Logout</div>
+              </div>
             </a>
             <Link className="btn btn-gradient" to="/">
               Join Now

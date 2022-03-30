@@ -492,3 +492,37 @@ input[type="number"] {
 .table-container {
   overflow-x: auto;
 }
+
+.dropdown {
+  position: relative;
+  opacity: 1 !important;
+
+  .dropdown-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    top: 100%;
+    padding-top: 0.5rem;
+    transition: 0.4s ease;
+
+    .dropdown-item {
+      background-color: #fff;
+      color: $color3 !important;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 14px;
+      transition: 0.4s ease;
+
+      &:hover {
+        background-color: rgb(191, 191, 191);
+      }
+    }
+  }
+
+  &:hover {
+    .dropdown-content {
+      opacity: 1;
+    }
+  }
+}
